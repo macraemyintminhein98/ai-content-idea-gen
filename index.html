@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡 AI Content Idea Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6">💡 Content Idea Generator</h1>
+        <p class="text-center text-gray-600 mb-6">Struggling for ideas? Let AI spark your creativity!</p>
+        <div class="mb-4">
+            <label for="niche" class="block text-gray-700 text-sm font-bold mb-2">Enter your niche or topic:</label>
+            <input type="text" id="niche" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., sustainable fashion, productivity tips" />
+        </div>
+        <button id="generateBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">
+            Generate Ideas
+        </button>
+        <div id="results" class="mt-6 p-4 bg-gray-50 rounded hidden">
+            <h2 class="text-xl font-semibold mb-3">Your Ideas:</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Idea 1 (Example)</li>
+                <li>Idea 2 (Example)</li>
+                <li>Idea 3 (Example)</li>
+            </ul>
+            <p class="mt-4 text-center text-sm text-gray-500">Unlock 10+ ideas with a one-time purchase!</p>
+            <button id="buyBtn" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline">Unlock Full Access ($9.99)</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            document.getElementById('results').classList.remove('hidden');
+            // In a real app, this would call an API to generate ideas
+            // and then update the <ul> with the actual results.
+        });
+         document.getElementById('buyBtn').addEventListener('click', function() {
+            alert('Redirecting to Stripe Checkout for $9.99 purchase...');
+            // In a real app, this would initiate a Stripe Checkout session.
+        });
+    </script>
+</body>
+</html>
